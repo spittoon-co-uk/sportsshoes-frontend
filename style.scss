@@ -5,16 +5,17 @@ $light-green: #01fb97;
   font-family: $font-stack;
 }
 
-body {
+html, body {
+  width:100vw;
   margin: 0;
 }
 
 section {
-  padding: 5em 0;
+  padding: 2em 0;
   text-align: center;
+  width: 100vw;
   &.imagery {
-      width: fit-content;
-      margin: 0 auto;
+    margin: 0 auto;
   }
   &.description {
     background-size: cover;
@@ -29,16 +30,43 @@ section {
       }
     }
   }
+  &.hotspots {
+    display: none;
+    h1, h2, h3, h4, h5, h6 {
+      display: inline-block;
+      text-transform: uppercase;
+      margin: 0 2em;
+      &.green {
+        color: $light-green;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  &.description {
+    display: none;
+  }
 }
 
 div {
   &.container {
     display: block;
     margin: 1em auto;
+    .sketches {
+      img {
+        max-width:45%;
+        height: auto;
+      }
+    }
   }
   &.shoe {
     margin: -200px auto 0;
     text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -51,7 +79,7 @@ button {
     height: 50px;
     width: 50px;
     font-size: 2em;
-    position: absolute;
+    // position: absolute;
     &#btn-1 {
       top: 0;
       left: 50px;
