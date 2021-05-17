@@ -1,9 +1,63 @@
-section.imagery {
-  width: fit-content;
-  margin: 0 auto; }
+* {
+  font-family: Helvetica, sans-serif; }
+
+html, body {
+  width: 100vw;
+  margin: 0; }
+
+section {
+  padding: 2em 0;
+  text-align: center;
+  width: 100vw; }
+  section.imagery {
+    margin: 0 auto; }
+  section.description {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-weight: bold; }
+    section.description h1, section.description h2, section.description h3, section.description h4, section.description h5, section.description h6, section.description p {
+      max-width: 60%;
+      margin: 1em auto; }
+      section.description h1#title, section.description h2#title, section.description h3#title, section.description h4#title, section.description h5#title, section.description h6#title, section.description p#title {
+        text-transform: uppercase; }
+  section.hotspots {
+    display: none; }
+    section.hotspots h1, section.hotspots h2, section.hotspots h3, section.hotspots h4, section.hotspots h5, section.hotspots h6 {
+      display: inline-block;
+      text-transform: uppercase;
+      margin: 0 2em; }
+      section.hotspots h1.green, section.hotspots h2.green, section.hotspots h3.green, section.hotspots h4.green, section.hotspots h5.green, section.hotspots h6.green {
+        color: #01fb97; }
+    @media screen and (max-width: 768px) {
+      section.hotspots {
+        display: block; } }
+  section.description {
+    display: none; }
 
 div.container {
   display: block;
   margin: 1em auto; }
+  div.container .sketches img {
+    max-width: 45%;
+    height: auto; }
+div.shoe {
+  margin: -200px auto 0;
+  text-align: center; }
+  div.shoe img {
+    max-width: 100%;
+    height: auto; }
+
+button.btn {
+  background-color: #01fb97;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  height: 50px;
+  width: 50px;
+  font-size: 2em; }
+  button.btn#btn-1 {
+    top: 0;
+    left: 50px; }
 
 /*# sourceMappingURL=styles.css.map */
