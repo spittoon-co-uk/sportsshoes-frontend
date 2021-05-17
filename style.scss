@@ -1,7 +1,33 @@
+$font-stack:    Helvetica, sans-serif;
+$light-green: #01fb97;
+
+* {
+  font-family: $font-stack;
+}
+
+body {
+  margin: 0;
+}
+
 section {
+  padding: 5em 0;
+  text-align: center;
   &.imagery {
       width: fit-content;
       margin: 0 auto;
+  }
+  &.description {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-weight: bold;
+    h1, h2, h3, h4, h5, h6, p {
+      max-width: 60%;
+      margin: 1em auto;
+      &#title {
+        text-transform: uppercase;
+      }
+    }
   }
 }
 
@@ -9,5 +35,26 @@ div {
   &.container {
     display: block;
     margin: 1em auto;
+  }
+  &.shoe {
+    margin: -200px auto 0;
+    text-align: center;
+  }
+}
+
+button {
+  &.btn {
+    background-color: $light-green;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    position: absolute;
+    &#btn-1 {
+      top: 0;
+      left: 50px;
+    }
   }
 }
